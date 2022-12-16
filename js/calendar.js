@@ -35,6 +35,6 @@ document.querySelector('#calendar thead tr:nth-child(1) td:nth-child(1)').onclic
   Calendar("calendar", document.querySelector('#calendar thead td:nth-child(2)').dataset.year, parseFloat(document.querySelector('#calendar thead td:nth-child(2)').dataset.month)-1);
 }
 // переключатель плюс месяц
-document.querySelector('#calendar2 thead tr:nth-child(1) td:nth-child(3)').onclick = function() {
+document.querySelector('#calendar thead tr:nth-child(1) td:nth-child(3)').onclick = function() {
   Calendar("calendar", document.querySelector('#calendar thead td:nth-child(2)').dataset.year, parseFloat(document.querySelector('#calendar thead td:nth-child(2)').dataset.month)+1);
 }
