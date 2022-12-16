@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title></title>
+  </head>
+  <body>
+
+    <h2 class="title">Создать событие</h2>
+
+    <div class="form">
+      <form class="" action="" method="post">
+        <div class="request-form__item">
+          <label for="">Название
+            <input type="text" name="title" value="" class="input form__input">
+          </label>
+        </div>
+        <div class="request-form__item">
+          <label for="">Дата
+            <input type="date" name="date" value="" class="input form__input form-date__input">
+          </label>
+        </div>
+        <div class="request-form__item">
+          <label for="">Время
+            <input type="time" name="time" value="" class="input form__input form-date__input">
+          </label>
+        </div>
+        <div class="request-form__item">
+          <label for="" >Категория
+            <select class="input form__input select" name="category" id="category">
+              <option value="-">-</option>
+              <option value="Музыка">Музыка</option>
+              <option value="Театр">Театр</option>
+              <option value="Спорт">Спорт</option>
+              <option value="Фестиваль">Фестиваль</option>
+              <option value="Музей">Музей</option>
+            </select>
+          </label>
+        </div>
+        <div class="request-form__item">
+          <label for="" >Жанр
+            <select class="input form__input select" name="genre" id="genre">
+              <option value="-">-</option>
+              <option value="Классика">Классика</option>
+              <option value="Рок">Рок</option>
+              <option value="Танец">Танец</option>
+              <option value="Юмор">Юмор</option>
+            </select>
+          </label>
+        </div>
+        <div class="request-form__item">
+          <label for="">Место проведения
+            <input type="text" name="address" value="" class="input form__input">
+          </label>
+        </div>
+        <div class="request-form__item">
+          <label for="">Диапазон стоимости билетов
+            <input type="text" name="price" value="" class="input form__input">
+          </label>
+        </div>
+        <div class="request-form__item">
+          <label for="">Общая информация
+            <input type="text" name="info" value="" class="input form__input">
+          </label>
+        </div>
+        <div class="request-form__item">
+          <label for="">Ссылка на сайт организатора
+            <input type="text" name="org_link" value="" class="input form__input">
+          </label>
+        </div>
+        <div class="request-form__item">
+          <label for="">Афиша
+            <input type="file" name="photo" value="" multiple accept="image/*" class="input form__input form-photo__input">
+          </label>
+        </div>
+        <div class="request-form__item">
+          <label for="">Телефон организатора
+            <input type="tel" name="phone" value="" class="input form__input">
+          </label>
+        </div>
+        <div class="request-form__item">
+          <label for="">Email организатора
+            <input type="email" name="org_email" value="" class="input form__input">
+          </label>
+        </div>
+        <div class="request-form__item">
+          <button type="button" name="button_publication" class="button form__button" onclick="successfulForm()">Опубликовать</button>
+        </div>
+      </form>
+    </div>
+    <script type="text/javascript" src="js/edit_event.js"></script>
+    <script type="text/javascript" src="js/load_data.js"></script>
+    <script src="js/click.js"></script>
+  </body>
+</html>

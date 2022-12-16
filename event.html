@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title></title>
+  </head>
+  <body>
+
+    <header class="header">
+      <a href="main.html">
+        <img class="logo" src="img/logo.svg">
+      </a>
+      <form class="search-form">
+          <input name="search" class="input search-input" type="text">
+          <button class="search-form__button"></button>
+      </form>
+      <div class="navbar">
+        <a href="search.html?&Музыка">Музыка</a>
+        <a href="search.html?&Театр">Театр</a>
+        <a href="search.html?&Спорт">Спорт</a>
+        <a href="search.html?&Фестиваль">Фестиваль</a>
+        <a href="search.html?&Музей">Музей</a>
+      </div>
+      <div class="navbar">
+        <div class="dropdown">
+          <button class="dropbtn">Жанр
+            <img src="img/arrow.svg" alt="">
+          </button>
+          <div class="dropdown-content">
+            <a href="search.html?&Юмор">Юмор</a>
+            <a href="search.html?&Танец">Танец</a>
+            <a href="search.html?&Классика">Классика</a>
+            <a href="search.html?&Рок">Рок</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">Дата
+            <img src="img/arrow.svg" alt="">
+          </button>
+          <div class="dropdown-content">
+            <input class="date_input" type="date" name="date_picker" value="" onchange="search_by_date()">
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">Стоимость
+            <img src="img/arrow.svg" alt="">
+          </button>
+          <div class="dropdown-content">
+            <input class="price_input" type="range" min="0" max="10000" value="100">
+            <a href="#">Бесплатно</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">Сортировать
+            <img src="img/arrow.svg" alt="">
+          </button>
+          <div class="dropdown-content">
+            <a href="#">Популярные</a>
+            <a href="#">Ближайшие</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="event-content">
+      <table id="calendar">
+        <thead>
+          <tr><td>‹<td colspan="5"><td>›
+          <tr><td>Пн<td>Вт<td>Ср<td>Чт<td>Пт<td>Сб<td>Вс
+        <tbody>
+      </table>
+    </div>
+
+    <div class="event-text"></div>
+
+    <h3 class="subtitle2">Рекомендуемые события</h3>
+
+    <div class="events">
+      <div class="events__item" onclick="window.location.href = 'event.html?&2'">
+        <img src="img/ice-show.svg" alt="">
+        <h3 class="event-title">Морозко. Новогодняя ледовая сказака И. Авербуха</h3>
+        <p class="event-date">4 января 2023 12:00, 17:00</p>
+        <p class="event-price">1 000 — 5 000 р</p>
+        <p>Платинум арена</p>
+      </div>
+      <div class="events__item" onclick="window.location.href = 'event.html?&3'">
+        <img src="img/usovich.svg" alt="">
+        <h3 class="event-title">Ваня Усович</h3>
+        <p class="event-date">5 марта 2023 18:00</p>
+        <p class="event-price">1 500 - 2 900 р</p>
+        <p>Концертный зал "Афонтово"</p>
+      </div>
+    </div>
+
+    <h3 class="subtitle">Хотите быть в курсе всех интересных событий Красноярска? <br>
+        Подписывайтесь на рассылку!</h3>
+
+    <div class="sub-form">
+      <form>
+          <input class="input" type="text" placeholder="Введите e-mail">
+          <button class="button" onclick="successfulSub()">Подписаться</button>
+      </form>
+    </div>
+
+    <footer>
+      <div class="footer-content">
+        <h4>О нас</h4>
+        <a href="#">Обратная связь</a>
+        <a href="#">О проекте</a>
+      </div>
+      <div class="footer-content">
+        <h4>Организаторам</h4>
+        <a href="request_form_organizer.html">Сотрудничество</a>
+        <a href="admin_login.html">Вход для администратора</a>
+      </div>
+    </footer>
+
+    <script type="text/javascript" src="js/load_data.js"></script>
+    <script type="text/javascript" src="js/calendar.js"></script>
+    <script type="text/javascript" src="js/search_click.js"></script>
+    <script type="text/javascript" src="js/event.js"></script>
+    <script src="js/click.js"></script>
+  </body>
+</html>

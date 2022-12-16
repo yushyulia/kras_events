@@ -1,0 +1,444 @@
+@font-face {
+  font-family: 'Inter';
+  src: url(../fonts/Inter-VariableFont_slnt,wght.ttf);
+}
+
+html {
+  font-family: "Inter";
+}
+
+body {
+  margin: 0;
+}
+
+.logo {
+  padding-top: 40px;
+  padding-left: 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 245px;
+  height: 29px;
+}
+
+.search-form {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding-bottom: 40px;
+  /* padding-top: -20px; */
+}
+
+.input {
+  width: 500px;
+  height: 40px;
+  background: #EDEDED;
+  border-radius: 30px;
+  border: none;
+  box-sizing: border-box;
+  padding-left: 20px;
+}
+
+.search-input {
+  padding-left: 60px;
+}
+
+.search-form__button {
+  position: absolute;
+  left: 10px;
+  background-image: url(../img/icon-search.svg);
+  background-color: inherit;
+  border: none;
+  width: 37px;
+  height: 37px;
+}
+
+.navbar {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 30px;
+}
+
+.navbar a {
+  font-size: 16px;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: black;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: #FEF339;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.date_input {
+  width: 100%;
+  border: none;
+  padding: 12px 16px;
+}
+
+.price_input {
+  width: 70%;
+  padding: 12px 16px;
+}
+
+.title {
+  text-align: center;
+  margin-top: 70px;
+}
+
+.slide {
+  position: relative;
+  margin-top: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 565px;
+}
+
+.slider__text {
+    position: absolute;
+    top: 150px;
+    left: 250px;
+    background-color: rgba(255, 255, 255, 0.4);;
+    color: black;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.slider img {
+  width:100%;
+}
+
+.button {
+  margin-top: 30px;
+  width: 150px;
+  height: 40px;
+  text-decoration-style: solid;
+  background: #FEF339;
+  border-radius: 30px;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.events {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+.search-row {
+  margin-top: 20px;
+  display: flex;
+}
+
+.events__item {
+  float: left;
+  width: 25%;
+  padding-left: 70px;
+  cursor: pointer;
+}
+
+/* Clear floats after image containers */
+.events::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.event-date {
+  display: inline-block;
+  margin: 0;
+}
+
+.event-price {
+  display: inline-block;
+  margin: 0;
+}
+
+.event-title {
+  margin-top: 0;
+}
+
+.search-events {
+  margin-top: 40px;
+  display: flex;
+}
+
+.not_events {
+  align-items: center;
+  justify-content: center
+}
+
+.subtitle{
+  text-align: center;
+  margin-top: 60px;
+}
+
+.sub-form {
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #EDEDED;
+  padding-left: 200px;
+  padding-bottom: 50px;
+  padding-top: 20px;
+  margin-top: 40px;
+  /* padding-bottom: 50px; */
+}
+
+.footer-content {
+  padding-right: 150px;
+}
+
+.footer-content a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  margin-bottom: 6px;
+}
+
+.event-content {
+  margin-top: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+.event-content__photo {
+  width: 291px;
+  height: 291px;
+  margin-right: 70px;
+}
+
+.event-content__info {
+  width: 291px;
+  height: 291px;
+  margin-right: 70px;
+}
+
+#calendar {
+  width: 291px;
+  height: 291px;
+  font: monospace;
+  line-height: 1.2em;
+  font-size: 15px;
+  text-align: center;
+  background-color: #EDEDED;
+}
+#calendar thead tr:last-child {
+  font-size: small;
+  color: black;
+}
+#calendar thead tr:nth-child(1) td:nth-child(2) {
+  color: black;
+}
+#calendar thead tr:nth-child(1) td:nth-child(1):hover, #calendar2 thead tr:nth-child(1) td:nth-child(3):hover {
+  cursor: pointer;
+}
+#calendar tbody td {
+  color: black;
+}
+#calendar tbody td:nth-child(n+6), #calendar2 .holiday {
+  color: black;
+}
+#calendar tbody td.today {
+  background: #FEF339;
+  color: black;
+}
+
+.event-text {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 70px;
+}
+
+.event-text__item {
+  width: 1010px;
+  height: 144px;
+  text-align: justify;
+}
+
+.subtitle2 {
+  text-align: center;
+  margin-top: 120px;
+}
+
+.login-title {
+  text-align: center;
+  margin-top: 120px;
+}
+
+.form {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+}
+
+.form__item {
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.form__input, label {
+  display: block;
+}
+
+.form__button {
+  width: 308px;
+}
+
+.request-form__item {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.form-date__input {
+  padding-right: 20px;
+}
+
+.form-photo__input {
+  height: 80px;
+  padding: 25px;
+}
+
+.list-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.list-links a {
+  margin: 40px;
+  text-decoration: none;
+  color: black;
+}
+
+.table-title {
+  text-align: center;
+}
+
+.search-admin-input {
+  width: 1049px;
+  margin-top: 100px;
+}
+
+#events {
+  margin: auto;
+  margin-top: 100px;
+  width: 1049px;
+  background: #EDEDED;
+  border-radius: 30px;
+  border-spacing: 24px 30px;
+}
+
+#events .title {
+  width: 169px;
+  height: 44px;
+  font-size: 20px;
+}
+#events .info_date_place {
+  width: 285px;
+  height: 80px;
+  font-size: 16px;
+}
+#events .info_text_event {
+  font-size: 16px;
+  max-width: 119px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Вперед назад кнопки */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: 250px;
+  padding: 16px;
+  color: grey;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Положение "next кнопки" справа */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Точки*/
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 40px 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
