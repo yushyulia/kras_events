@@ -19,17 +19,17 @@
       <form class="" action="" method="post">
         <div class="request-form__item">
           <label for="">Название
-            <input type="text" name="title" value="" class="input form__input">
+            <input type="text" name="title" value="" class="input form__input" required>
           </label>
         </div>
         <div class="request-form__item">
           <label for="">Дата
-            <input type="date" name="date" value="" class="input form__input form-date__input">
+            <input type="date" name="date" value="" class="input form__input form-date__input" required>
           </label>
         </div>
         <div class="request-form__item">
           <label for="">Время
-            <input type="time" name="time" value="" class="input form__input form-date__input">
+            <input type="time" name="time" value="" class="input form__input form-date__input" required>
           </label>
         </div>
         <div class="request-form__item">
@@ -57,46 +57,48 @@
         </div>
         <div class="request-form__item">
           <label for="">Место проведения
-            <input type="text" name="address" value="" class="input form__input">
+            <input type="text" name="address" value="" class="input form__input" required>
           </label>
         </div>
         <div class="request-form__item">
           <label for="">Диапазон стоимости билетов
-            <input type="text" name="price" value="" class="input form__input">
+            <input type="text" name="price" value="" class="input form__input" required>
           </label>
         </div>
         <div class="request-form__item">
           <label for="">Общая информация
-            <input type="text" name="info" value="" class="input form__input">
+            <input type="text" name="info" value="" class="input form__input" required>
           </label>
         </div>
         <div class="request-form__item">
           <label for="">Ссылка на сайт организатора
-            <input type="text" name="org_link" value="" class="input form__input">
+            <input type="text" name="org_link" value="" class="input form__input" required pattern="(https?):((//)|(\\\\))+[\w\d:#@%/;$()~_?\+-=\\\.&]*">
           </label>
         </div>
         <div class="request-form__item">
-          <label for="">Афиша
-            <input type="file" name="photo" value="" multiple accept="image/*" class="input form__input form-photo__input">
+          <label for="">Афиша (URL изображения)
+            <input type="text" name="photo" value="" class="input form__input" required pattern="(https?):((//)|(\\\\))+[\w\d:#@%/;$()~_?\+-=\\\.&]\S+(?:jpg|jpeg|png|svg)$">
           </label>
         </div>
         <div class="request-form__item">
           <label for="">Телефон организатора
-            <input type="tel" name="phone" value="" class="input form__input">
+            <input type="tel" name="phone" value="" class="input form__input" required pattern="^((\+7|7|8)+([0-9]){10})$">
           </label>
         </div>
         <div class="request-form__item">
           <label for="">Email организатора
-            <input type="email" name="org_email" value="" class="input form__input">
+            <input type="email" name="org_email" value="" class="input form__input" required pattern="^[^@\s]+@[^@\s]+\.[^@\s]+$">
           </label>
         </div>
         <div class="request-form__item">
-          <button type="button" name="button_add" class="button form__button" onclick="successfulForm()">Отправить</button>
+          <button type="submit" name="button_add" class="button form__button">Отправить</button>
         </div>
       </form>
     </div>
     <script type="text/javascript" src="js/add_request.js"></script>
     <script type="text/javascript" src="js/load_data.js"></script>
     <script src="js/click.js"></script>
+    <script src="js/validation.js"></script>
+
   </body>
 </html>

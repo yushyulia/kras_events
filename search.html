@@ -93,7 +93,7 @@
 
     <div class="sub-form">
       <form>
-          <input class="input" type="text" placeholder="Введите e-mail">
+          <input class="input" type="text" name="subscription_input" placeholder="Введите e-mail" required pattern="^[^@\s]+@[^@\s]+\.[^@\s]+$">
           <button class="button" onclick="successfulSub()">Подписаться</button>
       </form>
     </div>

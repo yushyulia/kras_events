@@ -11,28 +11,34 @@ let input_photo = document.querySelector('input[name=photo]')
 let input_phone = document.querySelector('input[name=phone]')
 let input_org_email = document.querySelector('input[name=org_email]')
 let publButton = document.querySelector('button[name=button_publication]')
-let key
+let key;
 
-window.addEventListener("load", function(){
+window.addEventListener('load', function(){
   var score = decodeURIComponent(location.search.substr(1)).split('&');
   score.splice(0, 1);
   key = score[0];
-  let data = JSON.parse(localStorage.getItem(key))
-  input_title.value = data.title;
-  input_date.value = data.date;
-  input_time.value = data.time;
-  input_address.value = data.address;
-  input_price.value = data.price;
-  input_info.value = data.info;
-  input_org_link.value = data.org_link;
-  // input_photo.value = data.photo;
-  input_phone.value = data.phone;
-  input_org_email.value = data.org_email;
-  input_category.value = data.category;
-  input_genre.value = data.genre;
+  if(key){
+    let data = JSON.parse(localStorage.getItem(key))
+    input_title.value = data.title;
+    input_date.value = data.date;
+    input_time.value = data.time;
+    input_address.value = data.address;
+    input_price.value = data.price;
+    input_info.value = data.info;
+    input_org_link.value = data.org_link;
+    input_photo.value = data.photo;
+    input_phone.value = data.phone;
+    input_org_email.value = data.org_email;
+    input_category.value = data.category;
+    input_genre.value = data.genre;
+  }
 });
 
 publButton.addEventListener('click', () => {
+  let check = validationEventForm(input_title, input_date, input_time, input_category, input_genre,
+                                  input_address, input_price, input_info, input_org_link, input_photo,
+                                  input_phone, input_org_email)
+  if(check){
     let title = input_title.value
     let date = input_date.value
     let time = input_time.value
@@ -48,5 +54,7 @@ publButton.addEventListener('click', () => {
     let data = {'title':title, 'date':date, 'time':time, 'category':category, 'genre':genre, 'address':address, 'price':price, 'info':info, 'org_link':org_link, 'photo':photo, 'phone':phone, 'org_email':org_email, 'flag':1}
     localStorage.setItem(`${++localStorage.length}`, JSON.stringify(data))
     localStorage.removeItem(key);
-    window.location.href = 'event_list.html'
+    event.preventDefault();
+    window.location.href = 'event_list.html';
+  }
 })

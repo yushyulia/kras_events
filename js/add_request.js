@@ -17,20 +17,27 @@ window.addEventListener('keydown', e => {
     if (e.keyCode == 13) addButton.click()
 })
 
-  addButton.addEventListener('click', () => {
-      let data = {'title':input_title.value,
-      'date':input_date.value,
-      'time':input_time.value,
-      'category':input_category.options[input_category.selectedIndex].value,
-      'genre':input_genre.options[input_genre.selectedIndex].value,
-      'address':input_address.value,
-      'price':input_price.value,
-      'info':input_info.value,
-      'org_link':input_org_link.value,
-      'photo':input_photo.value,
-      'phone':input_phone.value,
-      'org_email':input_org_email.value,
-      'flag':0}
-      localStorage.setItem(`${++localStorage.length}`, JSON.stringify(data))
-      window.location.href = 'main.html'
-  })
+addButton.addEventListener('click', () => {
+  let check = validationEventForm(input_title, input_date, input_time, input_category, input_genre,
+                                  input_address, input_price, input_info, input_org_link, input_photo,
+                                  input_phone, input_org_email)
+  if(check){
+    let data = {'title':input_title.value,
+    'date':input_date.value,
+    'time':input_time.value,
+    'category':input_category.options[input_category.selectedIndex].value,
+    'genre':input_genre.options[input_genre.selectedIndex].value,
+    'address':input_address.value,
+    'price':input_price.value,
+    'info':input_info.value,
+    'org_link':input_org_link.value,
+    'photo':input_photo.value,
+    'phone':input_phone.value,
+    'org_email':input_org_email.value,
+    'flag':0}
+    localStorage.setItem(`${++localStorage.length}`, JSON.stringify(data));
+    event.preventDefault();
+    successfulForm();
+    window.location.href = 'main.html';
+  }
+});
